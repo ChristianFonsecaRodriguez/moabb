@@ -161,8 +161,8 @@ class Liu2024(BaseDataset):
         Notes
         -----
         The 'trial_type' variable can take the following values:
-         - 1 : Left hand
-         - 2 : Right hand
+         - 1 : Right hand
+         - 2 : Left hand
 
         The 'value' variable can take the following values:
          - 1 : instructions
@@ -172,13 +172,13 @@ class Liu2024(BaseDataset):
         """
         # Define the mapping dictionary
         encoding_mapping = {
-            (2, 2): 1,  # Left hand, MI
-            (1, 2): 2,  # Right hand, MI
+            (1, 2): 1,  # Right hand, MI
+            (2, 2): 2,  # Left hand, MI
         }
 
         mapping = {
-            1: "left_hand",
-            2: "right_hand",
+            1: "right_hand",
+            2: "left_hand",
         }
 
         if self.instr_events:
